@@ -37,8 +37,5 @@ for __ in range(numero_casos):
                     pos=matriz[anterior]
                     pos.append(actual)
                 i-=1
-    desarrollo(matriz,vis)
     
-
-
-
+    desarrollo(matriz,vis)
