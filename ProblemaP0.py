@@ -9,6 +9,7 @@ for __ in range(numero_casos):
     for n in case_list:
     	if n % 2 == 0 :
     		np=np+1
-    		sp = sp+n
-    print(np,sp)
 
+
+def desarrollo():
+    visitados=[False*np]
