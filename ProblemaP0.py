@@ -40,6 +40,7 @@ for __ in range(numero_casos):
             while i > -1:
                 anterior=int(case_list[i])
                 if anterior>actual:
+                    vis[actual]=True
                     pos1=matriz[actual]
                     pos1.append(anterior)
                     pos=matriz[anterior]
