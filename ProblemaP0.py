@@ -10,11 +10,17 @@ def desarrollo(matriz, vis):
             cuantos+=1
             visitados[llave]=True
             listaAdyacencia= matriz[llave]
-            for elemento in listaAdyacencia:
-                visitados[elemento]=True
+            listaAdy(listaAdyacencia,visitados,matriz)
         else:
             pass
     print(cuantos)
+
+def listaAdy(lista, visitados, matriz):
+     for elemento in lista:
+        if visitados[elemento]==False:
+            visitados[elemento]=True
+            listaAdy(matriz[elemento],visitados,matriz)
+
 
 numero_casos = int(sys.stdin.readline())
 for __ in range(numero_casos):
@@ -34,8 +40,9 @@ for __ in range(numero_casos):
             while i > -1:
                 anterior=int(case_list[i])
                 if anterior>actual:
+                    pos1=matriz[actual]
+                    pos1.append(anterior)
                     pos=matriz[anterior]
                     pos.append(actual)
                 i-=1
-    
     desarrollo(matriz,vis)
